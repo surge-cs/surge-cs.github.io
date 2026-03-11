@@ -168,7 +168,7 @@ nav {
 .hero-title {
   font-family: var(--serif);
   font-weight: 800;
-  font-size: clamp(52px, 7.5vw, 108px);
+  font-size: clamp(36px, 5vw, 72px);
   line-height: 0.95;
   letter-spacing: -0.04em;
   color: var(--white);
@@ -182,7 +182,7 @@ nav {
 }
 
 .hero-sub {
-  font-size: clamp(17px, 2vw, 22px);
+  font-size: clamp(15px, 1.6vw, 18px);
   font-weight: 300;
   color: var(--smoke);
   max-width: 560px;
@@ -255,7 +255,7 @@ nav {
 .stat-num {
   font-family: var(--serif);
   font-weight: 800;
-  font-size: 36px;
+  font-size: 28px;
   letter-spacing: -0.04em;
   color: var(--white);
   line-height: 1;
@@ -320,7 +320,7 @@ section { padding: 100px 48px; }
 .section-title {
   font-family: var(--serif);
   font-weight: 800;
-  font-size: clamp(36px, 4.5vw, 60px);
+  font-size: clamp(28px, 3.5vw, 48px);
   letter-spacing: -0.04em;
   line-height: 1.0;
   color: var(--white);
@@ -354,7 +354,7 @@ section { padding: 100px 48px; }
 .problem-card-num {
   font-family: var(--serif);
   font-weight: 800;
-  font-size: 64px;
+  font-size: 48px;
   letter-spacing: -0.05em;
   color: rgba(255,255,255,0.04);
   line-height: 1;
@@ -541,7 +541,7 @@ section { padding: 100px 48px; }
   bottom: -10px; right: 10px;
   font-family: var(--serif);
   font-weight: 800;
-  font-size: 80px;
+  font-size: 56px;
   letter-spacing: -0.05em;
   color: rgba(255,255,255,0.025);
   line-height: 1;
@@ -583,7 +583,7 @@ section { padding: 100px 48px; }
 .about-initials {
   font-family: var(--serif);
   font-weight: 800;
-  font-size: 64px;
+  font-size: 48px;
   letter-spacing: -0.06em;
   color: #000;
   line-height: 1;
@@ -620,7 +620,7 @@ section { padding: 100px 48px; }
 .about-content {}
 .about-quote {
   font-family: var(--serif);
-  font-size: clamp(22px, 2.8vw, 34px);
+  font-size: clamp(18px, 2.2vw, 26px);
   font-weight: 700;
   letter-spacing: -0.03em;
   color: var(--white);
@@ -674,7 +674,7 @@ section { padding: 100px 48px; }
 .pricing-name {
   font-family: var(--serif);
   font-weight: 800;
-  font-size: 32px;
+  font-size: 24px;
   letter-spacing: -0.03em;
   color: var(--white);
   margin-bottom: 8px;
@@ -690,7 +690,7 @@ section { padding: 100px 48px; }
 .price-coming {
   font-family: var(--serif);
   font-weight: 800;
-  font-size: 42px;
+  font-size: 32px;
   letter-spacing: -0.04em;
   color: var(--white);
 }
@@ -763,7 +763,7 @@ section { padding: 100px 48px; }
 .email-title {
   font-family: var(--serif);
   font-weight: 800;
-  font-size: clamp(28px, 4vw, 44px);
+  font-size: clamp(24px, 3vw, 36px);
   letter-spacing: -0.04em;
   color: var(--white);
   line-height: 1.05;
@@ -846,7 +846,7 @@ footer {
   nav { padding: 0 24px; }
   section { padding: 72px 24px; }
   .hero { padding: 100px 24px 64px; }
-  .hero-title { font-size: clamp(44px, 12vw, 72px); }
+  .hero-title { font-size: clamp(32px, 9vw, 48px); }
   .contents-layout { grid-template-columns: 1fr; gap: 48px; }
   .contents-sticky { position: static; }
   .problem-grid { grid-template-columns: 1fr; }
@@ -875,7 +875,7 @@ footer {
     </div>
     <span class="nav-logo-text">SURGE<em>CS</em></span>
   </a>
-  <a href="#get-toolkit" class="nav-cta">Get the Toolkit</a>
+  <a href="#notify" class="nav-cta">Get Early Access</a>
 </nav>
 
 
@@ -902,8 +902,8 @@ footer {
     </p>
 
     <div class="hero-actions">
-      <a href="#get-toolkit" class="btn-primary">
-        Get the Toolkit
+      <a href="#notify" class="btn-primary">
+        Get Early Access
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -1278,8 +1278,11 @@ footer {
     <h2 class="email-title">Get early access<br>+ <em>launch pricing.</em></h2>
     <p class="email-sub">Join the list and be the first to know when the toolkit drops. Early subscribers get a special launch price — and a free bonus template.</p>
     <div class="email-form">
-      <input type="email" class="email-input" placeholder="your@email.com">
-      <button class="email-submit">Notify Me</button>
+      <input type="email" id="emailInput" class="email-input" placeholder="Enter your work email">
+      <button class="email-submit" onclick="handleSubmit()">Notify Me</button>
+    </div>
+    <div id="emailConfirm" style="display:none; text-align:center; padding: 12px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); border-radius: 8px; color: #22c55e; font-size: 14px; max-width: 480px; margin: 0 auto 16px;">
+      ✓ You're on the list! We'll email you the moment it launches.
     </div>
     <div class="email-disclaimer">No spam. Unsubscribe anytime. Your email stays with us.</div>
   </div>
@@ -1296,8 +1299,24 @@ footer {
     </div>
     <span class="footer-logo-text">SURGE<em>CS</em></span>
   </a>
-  <div class="footer-copy">© 2025 Surge CS · Susan Scobie · All rights reserved</div>
+  <div class="footer-copy">© 2026 Surge CS · Susan Scobie · All rights reserved · <a href="/cdn-cgi/l/email-protection#b4dcd1d8d8dbf4c7c1c6d3d199d7c79ad7dbd9" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border);"><span class="__cf_email__" data-cfemail="355d5059595a7546404752501856461b565a58">[email&#160;protected]</span></a></div>
 </footer>
 
-</body>
-</html>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function handleSubmit() {
+  const input = document.getElementById('emailInput');
+  const confirm = document.getElementById('emailConfirm');
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!input.value || !emailRegex.test(input.value)) {
+    input.style.borderColor = 'var(--orange)';
+    input.focus();
+    return;
+  }
+  // Hide form, show confirmation
+  input.parentElement.style.display = 'none';
+  confirm.style.display = 'block';
+}
+// Also allow Enter key in email field
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('emailInput');
+  if (
