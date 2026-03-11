@@ -160,7 +160,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; di
 .email-title { font-family: var(--serif); font-weight: 800; font-size: clamp(24px, 3.2vw, 38px); letter-spacing: -0.04em; color: var(--text-dark); line-height: 1.05; margin-bottom: 12px; }
 .email-title em { color: var(--orange); font-style: normal; }
 .email-sub { font-size: 15px; color: var(--text-mid); margin-bottom: 28px; line-height: 1.65; }
-.email-form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto 10px; }
+.email-form { display: flex; flex-direction: column; gap: 10px; max-width: 420px; margin: 0 auto 10px; }
+.email-row { display: flex; gap: 8px; }
+.email-row .email-input { flex: 1; }
 .email-input { flex: 1; background: var(--white); border: 1px solid var(--border); border-radius: 7px; padding: 12px 15px; color: var(--text-dark); font-family: var(--body); font-size: 14px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
 .email-input::placeholder { color: var(--text-light); }
 .email-input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(240,90,40,0.1); }
@@ -186,7 +188,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
   .phases-grid { grid-template-columns: 1fr 1fr; }
   .about-layout { grid-template-columns: 1fr; gap: 36px; }
   .hero-stats { gap: 22px; }
-  .email-form { flex-direction: column; }
+  .email-row { flex-direction: column; }
   .email-submit { width: 100%; }
   footer { padding: 22px 20px; flex-direction: column; text-align: center; }
 }
@@ -381,10 +383,21 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
   <div class="email-inner">
     <h2 class="email-title">Get early access<br>+ <em>launch pricing.</em></h2>
     <p class="email-sub">Join the list and be the first to know when the toolkit drops. Early subscribers get a special launch price and a free bonus template.</p>
-    <div class="email-form">
-      <input type="email" id="emailInput" class="email-input" placeholder="Enter your work email">
-      <button class="email-submit" onclick="handleSubmit()">Notify Me</button>
-    </div>
+    <form id="mc-form" action="https://surge-cs.us17.list-manage.com/subscribe/post?u=9d0cd5eb737fe472aa68f9345&amp;id=bd85d8225e&amp;f_id=00116de0f0" method="post" target="_blank" novalidate>
+      <div class="email-form">
+        <input type="email" name="EMAIL" id="emailInput" class="email-input" placeholder="Work email address *" required>
+        <div class="email-row">
+          <input type="text" name="FNAME" id="mcFname" class="email-input" placeholder="First name">
+          <input type="text" name="LNAME" id="mcLname" class="email-input" placeholder="Last name">
+        </div>
+        <input type="text" name="COMPANY" id="mcCompany" class="email-input" placeholder="Company">
+        <!-- Mailchimp bot protection — do not remove -->
+        <div style="position:absolute;left:-5000px;" aria-hidden="true">
+          <input type="text" name="b_9d0cd5eb737fe472aa68f9345_bd85d8225e" tabindex="-1" value="">
+        </div>
+        <button type="submit" class="email-submit">Notify Me</button>
+      </div>
+    </form>
     <div id="emailConfirm" style="display:none;text-align:center;padding:12px 16px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;color:#16a34a;font-size:14px;max-width:420px;margin:0 auto 10px;">✓ You're on the list! We'll be in touch when it launches.</div>
     <div class="email-disclaimer">No spam. Unsubscribe anytime.</div>
   </div>
