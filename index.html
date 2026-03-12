@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7CVEE1SV3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -12,15 +13,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Surge CS — Build a High-Functioning CS Team in 90 Days</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23780606'/%3E%3Cpolyline points='8,26 16,8 24,26' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23C0394B'/%3E%3Cpolyline points='8,26 16,8 24,26' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  /* Hex codes updated to Red, Labels kept as 'orange' for stability */
-  --orange:       #780606;
-  --orange-light: #a30808;
-  --orange-pale:  #fff5f5;
-  --orange-mid:   #5a0404;
+  --orange:       #C0394B;
+  --orange-light: #D4566A;
+  --orange-pale:  #FDF0F2;
+  --orange-mid:   #8C2233;
   --black:        #111111;
   --charcoal:     #1A1A1A;
   --dark:         #222222;
@@ -50,9 +50,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; di
 .nav-cta:hover { background: var(--orange-mid); transform: translateY(-1px); }
 .hero { background: var(--black); min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px 48px 80px; position: relative; overflow: hidden; }
 .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 72px 72px; }
-.hero-glow { position: absolute; top: -160px; right: -160px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(120,6,6,0.2) 0%, transparent 65%); pointer-events: none; }
+.hero-glow { position: absolute; top: -160px; right: -160px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(192,57,75,0.14) 0%, transparent 65%); pointer-events: none; }
 .hero-inner { position: relative; max-width: 1080px; margin: 0 auto; width: 100%; }
-.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 32px; padding: 6px 14px; border-radius: 100px; border: 1px solid rgba(120,6,6,0.35); background: rgba(120,6,6,0.08); font-family: var(--serif); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange-light); animation: fadeUp 0.5s ease both; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 32px; padding: 6px 14px; border-radius: 100px; border: 1px solid rgba(192,57,75,0.35); background: rgba(192,57,75,0.08); font-family: var(--serif); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange-light); animation: fadeUp 0.5s ease both; }
 .eyebrow-dot { width: 5px; height: 5px; background: var(--orange); border-radius: 50%; animation: pulse 2.5s ease-in-out infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.3;transform:scale(0.6);} }
 .hero-title { font-family: var(--serif); font-weight: 800; font-size: clamp(36px, 5vw, 68px); line-height: 1.0; letter-spacing: -0.04em; color: var(--white); margin-bottom: 28px; animation: fadeUp 0.5s 0.08s ease both; }
@@ -62,7 +62,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; di
 .hero-sub strong { color: rgba(255,255,255,0.8); font-weight: 500; }
 .hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.5s 0.24s ease both; }
 .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: var(--white); font-family: var(--serif); font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 7px; text-decoration: none; transition: all 0.2s; letter-spacing: -0.01em; }
-.btn-primary:hover { background: var(--orange-mid); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(120,6,6,0.35); }
+.btn-primary:hover { background: var(--orange-mid); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(192,57,75,0.35); }
 .btn-primary svg { transition: transform 0.2s; }
 .btn-primary:hover svg { transform: translateX(3px); }
 .btn-ghost { display: inline-flex; align-items: center; gap: 7px; color: rgba(255,255,255,0.4); font-size: 14px; text-decoration: none; transition: color 0.2s; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 1px; }
@@ -118,9 +118,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; di
 .phase-card:hover { background: #2A2A2A; }
 .phase-top-bar { height: 2px; border-radius: 1px; margin-bottom: 22px; }
 .phase-card:nth-child(1) .phase-top-bar{background:var(--orange);}
-.phase-card:nth-child(2) .phase-top-bar{background:#8e0707;}
-.phase-card:nth-child(3) .phase-top-bar{background:#a30808;}
-.phase-card:nth-child(4) .phase-top-bar{background:#b80909;}
+.phase-card:nth-child(2) .phase-top-bar{background:#D4566A;}
+.phase-card:nth-child(3) .phase-top-bar{background:#E07888;}
+.phase-card:nth-child(4) .phase-top-bar{background:#E8A0A8;}
 .phase-days { font-family: var(--serif); font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 7px; }
 .phase-name { font-family: var(--serif); font-weight: 800; font-size: 18px; letter-spacing: -0.03em; color: var(--white); margin-bottom: 16px; }
 .phase-items { list-style: none; display: flex; flex-direction: column; gap: 7px; }
@@ -161,7 +161,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; di
 .include-check { color: var(--orange); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 .pricing-actions { padding: 24px 32px; }
 .btn-buy { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--orange); color: var(--white); font-family: var(--serif); font-weight: 700; font-size: 15px; letter-spacing: -0.01em; padding: 15px 26px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; width: 100%; transition: all 0.2s; }
-.btn-buy:hover { background: var(--orange-mid); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(120,6,6,0.3); }
+.btn-buy:hover { background: var(--orange-mid); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(192,57,75,0.3); }
 .pricing-note { text-align: center; font-size: 11px; color: rgba(255,255,255,0.18); margin-top: 10px; }
 .email-section { background: var(--light-gray); padding: 80px 48px; border-top: 1px solid var(--border); }
 .email-inner { max-width: 520px; margin: 0 auto; text-align: center; }
@@ -173,7 +173,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; di
 .email-row .email-input { flex: 1; }
 .email-input { flex: 1; background: var(--white); border: 1px solid var(--border); border-radius: 7px; padding: 12px 15px; color: var(--text-dark); font-family: var(--body); font-size: 14px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
 .email-input::placeholder { color: var(--text-light); }
-.email-input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(120,6,6,0.1); }
+.email-input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(192,57,75,0.1); }
 .email-submit { background: var(--orange); color: var(--white); font-family: var(--serif); font-weight: 700; font-size: 13px; padding: 12px 20px; border-radius: 7px; border: none; cursor: pointer; white-space: nowrap; transition: background 0.2s; letter-spacing: 0.01em; }
 .email-submit:hover { background: var(--orange-mid); }
 .email-disclaimer { font-size: 11px; color: var(--text-light); }
@@ -185,11 +185,6 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
 .footer-copy { font-size: 12px; color: var(--text-light); }
 .footer-copy a { color: var(--text-light); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
 .footer-copy a:hover { color: var(--text-dark); }
-
-/* SVG Colors Updated */
-svg polyline, svg path { stroke: currentColor; }
-.nav-icon svg polyline, .footer-icon svg polyline { stroke: #fff; }
-
 @media (max-width: 900px) {
   nav { padding: 0 20px; }
   .nav-links .nav-link { display: none; }
@@ -204,6 +199,10 @@ svg polyline, svg path { stroke: currentColor; }
   .email-row { flex-direction: column; }
   .email-submit { width: 100%; }
   footer { padding: 22px 20px; flex-direction: column; text-align: center; }
+}
+@media (max-width: 560px) {
+  .phases-grid { grid-template-columns: 1fr; }
+  .pricing-header,.pricing-amount,.pricing-includes,.pricing-actions { padding-left: 20px; padding-right: 20px; }
 }
 </style>
 </head>
@@ -307,7 +306,7 @@ svg polyline, svg path { stroke: currentColor; }
             <div style="background:var(--off-white);border-radius:6px;padding:10px;margin-bottom:10px;border:1px solid var(--border);"><div style="background:var(--mid-gray);height:5px;border-radius:3px;width:35%;margin-bottom:7px;"></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;"><div style="background:var(--orange);height:22px;border-radius:3px;"></div><div style="background:var(--mid-gray);height:22px;border-radius:3px;"></div><div style="background:var(--light-gray);height:22px;border-radius:3px;"></div></div></div>
             <div class="preview-bar" style="width:100%"></div><div class="preview-bar" style="width:70%"></div>
             <div style="height:10px;"></div>
-            <div style="display:flex;gap:4px;margin-bottom:7px;"><div style="background:rgba(120,6,6,0.12);border-radius:3px;height:18px;flex:1;border:1px solid rgba(120,6,6,0.18);"></div><div style="background:var(--light-gray);border-radius:3px;height:18px;flex:1;"></div><div style="background:var(--light-gray);border-radius:3px;height:18px;flex:1;"></div></div>
+            <div style="display:flex;gap:4px;margin-bottom:7px;"><div style="background:rgba(192,57,75,0.12);border-radius:3px;height:18px;flex:1;border:1px solid rgba(192,57,75,0.18);"></div><div style="background:var(--light-gray);border-radius:3px;height:18px;flex:1;"></div><div style="background:var(--light-gray);border-radius:3px;height:18px;flex:1;"></div></div>
             <div class="preview-bar" style="width:84%"></div><div class="preview-bar" style="width:58%"></div>
             <div style="height:12px;"></div>
             <div style="background:var(--orange);border-radius:6px;height:30px;display:flex;align-items:center;justify-content:center;"><div style="background:rgba(255,255,255,0.28);height:7px;border-radius:3px;width:34%;"></div></div>
@@ -390,7 +389,7 @@ svg polyline, svg path { stroke: currentColor; }
         <div class="include-item"><span class="include-check">→</span>90-Day Communication Plan</div>
       </div>
       <div class="pricing-actions">
-        <button type="button" class="btn-buy" onclick="document.getElementById('notify').scrollIntoView({behavior: 'smooth'})">Notify Me at Launch <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <a href="#notify" class="btn-buy">Notify Me at Launch <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <div class="pricing-note">Early subscribers get launch pricing · No spam, ever</div>
       </div>
     </div>
@@ -409,31 +408,35 @@ svg polyline, svg path { stroke: currentColor; }
           <input type="text" name="LNAME" id="mcLname" class="email-input" placeholder="Last name">
         </div>
         <input type="text" name="COMPANY" id="mcCompany" class="email-input" placeholder="Company">
+        <!-- Mailchimp bot protection — do not remove -->
         <div style="position:absolute;left:-5000px;" aria-hidden="true">
           <input type="text" name="b_9d0cd5eb737fe472aa68f9345_bd85d8225e" tabindex="-1" value="">
         </div>
         <button type="submit" class="email-submit">Notify Me</button>
       </div>
     </form>
-    <div id="emailConfirm" style="display:none;text-align:center;padding:12px 16px;background:rgba(120,6,6,0.08);border:1px solid rgba(120,6,6,0.2);border-radius:8px;color:#780606;font-size:14px;max-width:420px;margin:0 auto 10px;">✓ You're on the list! We'll be in touch when it launches.</div>
+    <div id="emailConfirm" style="display:none;text-align:center;padding:12px 16px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;color:#16a34a;font-size:14px;max-width:420px;margin:0 auto 10px;">✓ You're on the list! We'll be in touch when it launches.</div>
     <div class="email-disclaimer">No spam. Unsubscribe anytime.</div>
   </div>
 </div>
 
 <footer>
   <a href="#" class="footer-logo"><div class="footer-icon"><svg width="11" height="11" viewBox="0 0 20 20" fill="none"><polyline points="4,16 10,5 16,16" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="footer-wordmark">SURGE<em>CS</em></span></a>
-  <div class="footer-copy">© 2026 Surge CS · Susan Scobie · All rights reserved</div>
+  <div class="footer-copy">© 2026 Surge CS · Susan Scobie · All rights reserved · <a href="/cdn-cgi/l/email-protection#0169646d6d6e4172747366642c62722f626e6c"><span class="__cf_email__" data-cfemail="a1c9c4cdcdcee1d2d4d3c6c48cc2d28fc2cecc">[email&#160;protected]</span></a></div>
 </footer>
 
-<script>
-document.getElementById('mc-form').addEventListener('submit', function() {
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function handleSubmit() {
   const input = document.getElementById('emailInput');
   const confirm = document.getElementById('emailConfirm');
-  if (input.value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
-    this.style.display = 'none';
-    confirm.style.display = 'block';
+  if (!input.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+    input.style.borderColor = 'var(--orange)';
+    input.style.boxShadow = '0 0 0 3px rgba(192,57,75,0.15)';
+    input.focus();
+    return;
   }
-});
-</script>
-</body>
-</html>
+  input.parentElement.style.display = 'none';
+  confirm.style.display = 'block';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('emailInput');
