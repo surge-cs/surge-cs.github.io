@@ -204,6 +204,16 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
   .phases-grid { grid-template-columns: 1fr; }
   .pricing-header,.pricing-amount,.pricing-includes,.pricing-actions { padding-left: 20px; padding-right: 20px; }
 }
+
+/* Who Is This For */
+.who { background: #fff; padding: 80px 0; }
+.who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+@media (max-width: 768px) { .who-grid { grid-template-columns: 1fr; } }
+.who-card { background: var(--light); border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; }
+.who-card-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); }
+.who-card-headline { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--text-dark); line-height: 1.3; }
+.who-card-body { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+
 </style>
 </head>
 <body>
@@ -277,6 +287,35 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       <div class="problem-card"><div class="problem-card-border"></div><div class="problem-card-top"><div class="problem-card-icon" style="width:56px;height:56px;background:none;"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="#FDF0F2"/><rect x="7" y="14" width="16" height="12" rx="2.5" fill="#C0394B" opacity="0.15"/><rect x="7" y="14" width="16" height="12" rx="2.5" stroke="#C0394B" stroke-width="2"/><rect x="33" y="30" width="16" height="12" rx="2.5" fill="#C0394B" opacity="0.15"/><rect x="33" y="30" width="16" height="12" rx="2.5" stroke="#C0394B" stroke-width="2"/><path d="M23 20h10M23 20l-3-3M23 20l-3 3" stroke="#C0394B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M33 36H23M33 36l3-3M33 36l3 3" stroke="#C0394B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="problem-card-num">02</span></div><h3>The Tools Work. Just Not Well Enough.</h3><p>The processes aren't broken — they're just not built for scale. They get the job done today, which makes them hard to prioritize replacing. But "good enough to survive" and "built to be proactive" are very different operating modes.</p></div>
       <div class="problem-card"><div class="problem-card-border"></div><div class="problem-card-top"><div class="problem-card-icon" style="width:56px;height:56px;background:none;"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="#FDF0F2"/><circle cx="24" cy="20" r="8" fill="#C0394B" opacity="0.15"/><circle cx="24" cy="20" r="8" stroke="#C0394B" stroke-width="2"/><path d="M13 44c0-6.075 4.925-11 11-11s11 4.925 11 11" stroke="#C0394B" stroke-width="2.2" stroke-linecap="round"/><path d="M37 14l6-2.5M38 20l5 1.5M37 26l5 3.5" stroke="#C0394B" stroke-width="2" stroke-linecap="round"/></svg></div><span class="problem-card-num">03</span></div><h3>Leadership Doesn't Prioritize the Shift</h3><p>Making the transition from reactive to proactive requires dedicated time, updated processes, and organizational support. Most companies either don't recognize this or aren't prepared to invest in it — so the status quo persists.</p></div>
       <div class="problem-card"><div class="problem-card-border"></div><div class="problem-card-top"><div class="problem-card-icon" style="width:56px;height:56px;background:none;"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="#FDF0F2"/><path d="M9 43l10-12 8 6 9-14 6 7" stroke="#C0394B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 13h34M9 13v30" stroke="#C0394B" stroke-width="2.2" stroke-linecap="round"/><circle cx="43" cy="39" r="7" fill="#C0394B"/><path d="M43 36.5V40M43 41.5h.01" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div><span class="problem-card-num">04</span></div><h3>The Cost Stays Hidden</h3><p>A CS team stuck in reactive mode isn't failing visibly — it's just quietly leaving value on the table. Churn that could have been caught early, expansion that never got surfaced, a team that's grinding rather than growing. The damage compounds before anyone puts it on a slide.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="who">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:8px;"><span class="eyebrow-tag">Who Is This For</span></div>
+    <h2 class="section-title" style="text-align:center;">Built for CS leaders at every stage</h2>
+    <p class="section-body" style="text-align:center;max-width:560px;margin:12px auto 0;">Whether you're building from scratch, breaking a reactive cycle, or driving enterprise-wide transformation — this is your system.</p>
+    <div class="who-grid">
+
+      <div class="who-card">
+        <div class="who-card-tag">Start-up Growth-Stage</div>
+        <div class="who-card-headline">"You survived on hustle. Now you need a scalable system."</div>
+        <div class="who-card-body">You built a CS team that kept accounts through relationships, effort, and tribal knowledge. It worked — until it didn't. The company has grown, the team has grown, and the playbook that got you here isn't getting you to the next stage. You know something has to change. You're just not sure where to start or how to build structure without breaking what's working.</div>
+      </div>
+
+      <div class="who-card">
+        <div class="who-card-tag">Mid-Market</div>
+        <div class="who-card-headline">"Your team is good. But your processes need to evolve in order to get them out of reactive mode."</div>
+        <div class="who-card-body">Your CS team is experienced and motivated. But they're reactive — spending more time managing escalations than building relationships, more time firefighting than forecasting. Leadership is asking harder questions about NRR, churn, and expansion. You have 90 days to document a clear plan and show initial phase results. The Surge CS 90-Day Toolkit gives you one.</div>
+      </div>
+
+      <div class="who-card">
+        <div class="who-card-tag">Enterprise</div>
+        <div class="who-card-headline">"Leadership finally gets it. Now comes the hard part."</div>
+        <div class="who-card-body">Enterprise C-suites have stopped treating customer success as a support function — it's now a core business driver, and the expectation is clear: you, as the CS leader, will deliver on retention, expansion, and the bottom line. The mandate is to become genuinely customer-centric, not just customer-adjacent. The challenge is that your system was built for a different era. And the larger the team — 30, 50, 100+ CSMs — the harder it is to drive meaningful change while maintaining day-to-day client management. This toolkit gives you the structure to do both.</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -375,9 +414,9 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       </div>
       <div class="value-props" style="display:flex;flex-direction:column;gap:10px;margin:20px 0;padding:18px 20px;background:var(--off-white);border-radius:8px;border:1px solid var(--border);">
         <div style="font-size:12px;font-weight:700;color:var(--orange);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Why $97 is a no-brainer</div>
-        <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid);line-height:1.5;"><span style="color:var(--orange);font-weight:700;flex-shrink:0;">→</span><span>A CS consultant charges <strong style="color:var(--text-dark);">$150–250/hr.</strong> This covers 20–40 hours of work.</span></div>
-        <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid);line-height:1.5;"><span style="color:var(--orange);font-weight:700;flex-shrink:0;">→</span><span>One churned account costs <strong style="color:var(--text-dark);">$250,000+</strong> at enterprise. This helps you catch it before it leaves.</span></div>
-        <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid);line-height:1.5;"><span style="color:var(--orange);font-weight:700;flex-shrink:0;">→</span><span>Kristi Faltorusso's CSM bundle: <strong style="color:var(--text-dark);">$349.</strong> This is built for CS leaders, not CSMs.</span></div>
+        <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid);line-height:1.5;"><span style="color:var(--orange);font-weight:700;flex-shrink:0;">→</span><span>A CS consultant charges <strong style="color:var(--text-dark);">$150–250/hr.</strong> This gives you 20 years of their expertise in one download.</span></div>
+        <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid);line-height:1.5;"><span style="color:var(--orange);font-weight:700;flex-shrink:0;">→</span><span>One churned account costs at least <strong style="color:var(--text-dark);">$250,000+</strong> at enterprise. This helps you catch it before it leaves.</span></div>
+        <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid);line-height:1.5;"><span style="color:var(--orange);font-weight:700;flex-shrink:0;">→</span><span>Competing services and products are built for CSMs. <strong style="color:var(--text-dark);">This is built for the person leading them.</strong></span></div>
       </div>
       <div class="pricing-includes">
         <div class="includes-title">Everything included</div>
