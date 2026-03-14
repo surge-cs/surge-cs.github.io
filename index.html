@@ -48,7 +48,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; di
 .nav-link:hover { color: var(--text-dark); }
 .nav-cta { background: var(--orange); color: var(--white); font-family: var(--serif); font-weight: 700; font-size: 13px; letter-spacing: 0.02em; padding: 9px 20px; border-radius: 6px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
 .nav-cta:hover { background: var(--orange-mid); transform: translateY(-1px); }
-.hero { background: var(--black); min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px 48px 80px; position: relative; overflow: hidden; }
+.hero { background: var(--black); min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px 48px 80px; position: relative; overflow: visible; }
 .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 72px 72px; }
 .hero-glow { position: absolute; top: -160px; right: -160px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(192,57,75,0.14) 0%, transparent 65%); pointer-events: none; }
 .hero-inner { position: relative; max-width: 1080px; margin: 0 auto; width: 100%; }
@@ -94,7 +94,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; di
 .problem-card-num { font-family: var(--serif); font-weight: 800; font-size: 12px; color: var(--mid-gray); letter-spacing: 0.06em; }
 .problem-card h3 { font-family: var(--serif); font-weight: 700; font-size: 17px; color: var(--text-dark); letter-spacing: -0.02em; margin-bottom: 7px; }
 .problem-card p { font-size: 13px; color: var(--text-mid); line-height: 1.65; }
-.contents { background: var(--white); padding: 96px 48px; }
+.contents { background: var(--off-white); padding: 96px 48px; }
 .contents-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: start; margin-top: 16px; }
 .contents-sticky { position: sticky; top: 84px; }
 .toolkit-list { display: flex; flex-direction: column; gap: 2px; margin-top: 32px; }
@@ -260,16 +260,16 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
   </a>
   <div class="nav-links">
     <a href="#whats-inside" class="nav-link">What's Inside</a>
-    <a href="#about" class="nav-link">About</a>
     <a href="#readiness" class="nav-link">Is Your Company Ready?</a>
+    <a href="#about" class="nav-link">About</a>
     <a href="#notify" class="nav-cta">Get Early Access</a>
   </div>
 </nav>
 
-<section class="hero">
+<section class="hero" style="overflow:hidden;">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
-  <div class="hero-echo" style="position:absolute;left:50%;top:50%;transform:translate(-38%,-42%);pointer-events:none;z-index:0;">
+  <div class="hero-echo" style="position:absolute;left:50%;top:50%;transform:translate(-38%,-42%);pointer-events:none;z-index:0;overflow:visible;">
     <svg width="780" height="880" viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
       <polyline points="20,190 100,30 180,190" stroke="rgba(192,57,75,0.115)" stroke-width="18" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="10"/>
       <polyline points="20,190 100,30 180,190" stroke="rgba(192,57,75,0.085)" stroke-width="38" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="10"/>
@@ -349,7 +349,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       <div class="who-card">
         <div class="who-card-tag">Enterprise</div>
         <div class="who-card-headline">"Leadership finally gets it. Now comes the hard part."</div>
-        <div class="who-card-body">Enterprise C-suites have stopped treating customer success as a support function — it's now a core business driver tied directly to retention, expansion, and the bottom line. And the expectation that comes with that is clear: customer success can no longer be a silo. It has to be a company-wide commitment. But your system was built for a different era. And the larger the team — 30, 50, 100+ CSMs — the harder it is to drive meaningful change while maintaining day-to-day client management. This toolkit gives you the structure to do both.</div>
+        <div class="who-card-body">Enterprise C-suites have stopped treating Customer Success as a support function — it's now a core business driver tied directly to retention, expansion, and the bottom line. And the expectation that comes with that is clear: Customer Success can no longer be a silo. It has to be a company-wide commitment. But your system was built for a different era. And the larger the team — 30, 50, 100+ CSMs — the harder it is to drive meaningful change while maintaining day-to-day client management. This toolkit gives you the structure to do both.</div>
       </div>
 
     </div>
@@ -426,7 +426,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
     <form class="readiness-form" action="https://formspree.io/f/mojknqbl" method="POST">
 
       <div class="readiness-question">
-        <div class="readiness-question-label"><strong>C-suite support:</strong> Leadership actively prioritizes and funds customer success.</div>
+        <div class="readiness-question-label"><strong>C-suite support:</strong> Leadership actively prioritizes and funds Customer Success.</div>
         <div class="readiness-options">
           <div class="readiness-option"><input type="radio" name="q1" id="q1g" value="Green" required><label for="q1g" class="green">🟢 In place</label></div>
           <div class="readiness-option"><input type="radio" name="q1" id="q1y" value="Yellow"><label for="q1y" class="yellow">🟡 Needs attention</label></div>
@@ -435,7 +435,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       </div>
 
       <div class="readiness-question">
-        <div class="readiness-question-label"><strong>Customer-centricity:</strong> Every function understands their role in customer success.</div>
+        <div class="readiness-question-label"><strong>Customer-centricity:</strong> Every function understands their role in Customer Success.</div>
         <div class="readiness-options">
           <div class="readiness-option"><input type="radio" name="q2" id="q2g" value="Green" required><label for="q2g" class="green">🟢 In place</label></div>
           <div class="readiness-option"><input type="radio" name="q2" id="q2y" value="Yellow"><label for="q2y" class="yellow">🟡 Needs attention</label></div>
@@ -487,7 +487,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
     <div class="readiness-consult">
       <h4>Seeing red flags in your assessment?</h4>
       <p>If your results reveal gaps — particularly around C-suite support or company-wide alignment — a focused readiness consultation can help you build the business case, align leadership, and create the conditions for success before you begin.</p>
-      <a href="mailto:susan@surge-cs.com">Book a Readiness Consultation →</a>
+      <a href="/cdn-cgi/l/email-protection#ddaea8aebcb39daea8afbab8f0beaef3beb2b0">Book a Readiness Consultation →</a>
     </div>
 
   </div>
@@ -500,11 +500,12 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
     <div class="pricing-card">
       <div class="pricing-header"><span class="pricing-eyebrow">The Surge CS 90-Day Toolkit</span><div class="pricing-name">Complete CS Leader Toolkit</div><div class="pricing-desc">Everything you need to build a high-performing CS team — frameworks, templates, playbooks, scorecards, and a step-by-step 90-day roadmap.</div></div>
       <div class="pricing-amount">
-        <div class="price-tag">$97 <span style="font-size:16px;font-weight:400;color:var(--text-light);text-decoration:line-through;margin-left:6px;">$147</span></div>
-        <div class="price-note">Early access pricing · Moves to $147 at launch</div>
+        <div class="price-tag">$147 <span style="font-size:16px;font-weight:400;color:var(--text-light);text-decoration:line-through;margin-left:6px;">$197</span></div>
+        <div class="price-note">Early access pricing · Moves to $197 at launch</div>
+        <div style="margin-top:12px;padding:12px 14px;background:rgba(192,57,75,0.1);border:1px solid rgba(192,57,75,0.25);border-radius:8px;font-size:12px;color:rgba(255,255,255,0.75);line-height:1.6;"><span style="color:var(--orange-light);font-weight:600;">Early access includes:</span> In addition to the toolkit, you'll get two personal 30-minute sessions with Susan — a kick-off in your first two weeks, and a second session whenever you choose within 90 days.</div>
       </div>
       <div class="value-props" style="display:flex;flex-direction:column;gap:10px;margin:20px 0;padding:18px 20px;background:var(--off-white);border-radius:8px;border:1px solid var(--border);">
-        <div style="font-size:12px;font-weight:700;color:var(--orange);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Why $97 is a no-brainer</div>
+        <div style="font-size:12px;font-weight:700;color:var(--orange);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Why $147 is a no-brainer</div>
         <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid);line-height:1.5;"><span style="color:var(--orange);font-weight:700;flex-shrink:0;">→</span><span>A CS consultant charges <strong style="color:var(--text-dark);">$150–250/hr.</strong> This gives you 20 years of their expertise in one download.</span></div>
         <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid);line-height:1.5;"><span style="color:var(--orange);font-weight:700;flex-shrink:0;">→</span><span>One churned account costs at least <strong style="color:var(--text-dark);">$250,000+</strong> at enterprise. This helps you catch it before it leaves.</span></div>
         <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid);line-height:1.5;"><span style="color:var(--orange);font-weight:700;flex-shrink:0;">→</span><span>Competing services and products are built for CSMs. <strong style="color:var(--text-dark);">This is built for the person leading them.</strong></span></div>
@@ -528,7 +529,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       </div>
       <div class="pricing-actions">
         <a href="#notify" class="btn-buy">Notify Me at Launch <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="pricing-note">Early subscribers get launch pricing · No spam, ever</div>
+        <div class="pricing-note">Early access pricing · Moves to $197 at launch · No spam, ever</div>
       </div>
     </div>
   </div>
@@ -560,7 +561,8 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
 <div class="email-section" id="notify">
   <div class="email-inner">
     <h2 class="email-title">Get early access<br>+ <em>launch pricing.</em></h2>
-    <p class="email-sub">Join the list and be the first to know when the toolkit drops. Early subscribers get launch pricing before it moves to $147.</p>
+    <p class="email-sub">Join the list and be the first to know when the toolkit drops. Early subscribers get launch pricing before it moves to $197.</p>
+    <div style="margin-bottom:24px;padding:14px 16px;background:var(--orange-pale);border:1px solid rgba(192,57,75,0.2);border-radius:8px;font-size:13px;color:var(--text-mid);line-height:1.6;"><span style="color:var(--orange);font-weight:600;">Early access includes:</span> In addition to the toolkit, you'll get two personal 30-minute sessions with Susan — a kick-off in your first two weeks, and a second session whenever you choose within 90 days.</div>
     <form id="mc-form" action="https://surge-cs.us17.list-manage.com/subscribe/post?u=9d0cd5eb737fe472aa68f9345&amp;id=bd85d8225e&amp;f_id=00116de0f0" method="post" target="_blank" novalidate>
       <div class="email-form">
         <input type="email" name="EMAIL" id="emailInput" class="email-input" placeholder="Work email address *" required>
@@ -586,15 +588,9 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
   <div class="footer-copy">© 2026 Surge CS · Susan Scobie · All rights reserved · <a href="/cdn-cgi/l/email-protection#0169646d6d6e4172747366642c62722f626e6c"><span class="__cf_email__" data-cfemail="a1c9c4cdcdcee1d2d4d3c6c48cc2d28fc2cecc">[email&#160;protected]</span></a></div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function handleSubmit() {
   const input = document.getElementById('emailInput');
   const confirm = document.getElementById('emailConfirm');
   if (!input.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
-    input.style.borderColor = 'var(--orange)';
-    input.style.boxShadow = '0 0 0 3px rgba(192,57,75,0.15)';
-    input.focus();
-    return;
-  }
-  input.parentElement.style.display = 'none';
-  co
+    input.style.borderColor = 'var(--orange)'
