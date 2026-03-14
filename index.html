@@ -421,9 +421,9 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
     <div class="readiness-intro">
       <span class="eyebrow-tag">But First</span>
       <h2 class="section-title" style="margin-top:16px;">Is your company ready for this?</h2>
-      <p class="section-body" style="margin-top:12px;">Five quick questions. Your results will help us map a clear path forward.</p>
+      <p class="section-body" style="margin:12px auto 0;text-align:center;">Five quick questions. Your results will help us map a clear path forward.</p>
     </div>
-    <form class="readiness-form" action="https://formspree.io/f/mojknqbl" method="POST">
+    <form class="readiness-form" id="readiness-form" action="https://formspree.io/f/mojknqbl" method="POST">
 
       <div class="readiness-question">
         <div class="readiness-question-label"><strong>C-suite support:</strong> Leadership actively prioritizes and funds Customer Success.</div>
@@ -484,7 +484,44 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
 
     </form>
 
-    <div class="readiness-consult">
+    <div id="readiness-thankyou" style="display:none;max-width:640px;margin:0 auto;text-align:center;padding:48px 32px;background:#fff;border:1px solid var(--border);border-radius:14px;">
+      <div style="width:56px;height:56px;background:var(--orange-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#C0394B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 style="font-family:var(--serif);font-size:22px;font-weight:700;color:var(--text-dark);margin-bottom:12px;">Thank you — we'll be in touch shortly.</h3>
+      <p style="font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:24px;">Susan will personally review your results and follow up with recommended next steps. In the meantime, explore what the Surge CS 90-Day Toolkit can do for your team.</p>
+      <a href="#whats-inside" style="display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;padding:12px 24px;border-radius:7px;font-size:14px;font-weight:600;text-decoration:none;">See the Toolkit →</a>
+    </div>
+
+    <script>
+      (function() {
+        var form = document.getElementById('readiness-form');
+        var thankyou = document.getElementById('readiness-thankyou');
+        var consult = document.getElementById('readiness-consult-box');
+        if (form) {
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var data = new FormData(form);
+            fetch(form.action, {
+              method: 'POST',
+              body: data,
+              headers: { 'Accept': 'application/json' }
+            }).then(function(response) {
+              if (response.ok) {
+                form.style.display = 'none';
+                if (consult) consult.style.display = 'none';
+                thankyou.style.display = 'block';
+              }
+            }).catch(function() {
+              form.style.display = 'none';
+              thankyou.style.display = 'block';
+            });
+          });
+        }
+      })();
+    </script>
+
+    <div class="readiness-consult" id="readiness-consult-box">
       <h4>Seeing red flags in your assessment?</h4>
       <p>If your results reveal gaps — particularly around C-suite support or company-wide alignment — a focused readiness consultation can help you build the business case, align leadership, and create the conditions for success before you begin.</p>
       <a href="/cdn-cgi/l/email-protection#ddaea8aebcb39daea8afbab8f0beaef3beb2b0">Book a Readiness Consultation →</a>
