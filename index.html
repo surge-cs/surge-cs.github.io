@@ -38,6 +38,7 @@
     --sec-b:#f8f5fc;
     --sec-c:#f3eef9;
     --sec-dark:#462C7D;
+    --hero-muted:#9b8ab8; /* light purple-gray for hero subtitle */
   }
   *{box-sizing:border-box;margin:0;padding:0;border-color:var(--border)}
   html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth}
@@ -71,12 +72,12 @@
   @media(max-width:768px){.nav-links,.nav .btn-primary{display:none}}
 
   /* Hero */
-  .hero{position:relative;padding:144px 0 96px;overflow:hidden;background:#ffffff}
+  .hero{position:relative;padding:108px 0 96px;overflow:hidden;background:#ffffff}
   .hero::before{content:"";position:absolute;inset:0;background:var(--mesh);opacity:.8;z-index:-2}
   .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(91,99,122,.12) 1px,transparent 1px);background-size:22px 22px;opacity:.4;z-index:-1}
   .hero-grid{display:grid;gap:48px;grid-template-columns:1.1fr .9fr;align-items:center}
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
-  h1.hero-title{margin-top:24px;font-size:clamp(40px,6vw,72px);font-weight:600;line-height:1.02;letter-spacing:-.02em}
+  h1.hero-title{margin-top:0;font-size:clamp(40px,6vw,72px);font-weight:600;line-height:1.02;letter-spacing:-.02em}
   .hero p.lead{margin-top:24px;font-size:18px;line-height:1.6;color:var(--muted);max-width:560px}
   .hero p.lead strong{color:var(--ink);font-weight:600}
   .cta-row{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
@@ -247,6 +248,7 @@
   .consult-cta-box p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.65;margin-bottom:24px}
   .consult-price{font-size:13px;color:rgba(255,255,255,.45);margin-top:12px}
 </style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23462C7D'/%3E%3Ctext x='16' y='22' font-family='Inter,ui-sans-serif,sans-serif' font-size='20' font-weight='600' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
 
@@ -259,13 +261,13 @@
             <path d="M28 13c-1.5-2.2-4.4-3.4-7.6-3.4-4.6 0-7.9 2.3-7.9 5.7 0 3 2.4 4.7 6.8 5.6l2.6.5c3 .6 4.3 1.4 4.3 2.9 0 1.9-2.1 3.1-5.2 3.1-3 0-5.3-1.1-6.6-3" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
           </svg>
         </span>
-        <span class="logo-text">surge<span class="cs">cs</span></span>
+        <span class="logo-text">Surge <span class="cs">CS</span></span>
       </a>
       <div class="nav-links">
-        <a href="#how-it-works">How it works</a>
-        <a href="#whats-inside">What's inside</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
+        <a href="#whats-inside">What's Inside</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">What Makes This Different</a>
+        <a href="#pricing">Get The Toolkit</a>
       </div>
       <a href="#cta" class="btn btn-primary">Get early access</a>
     </nav>
@@ -275,13 +277,9 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="pill">
-        <span class="check-dot" style="width:6px;height:6px"></span>
-        Customer Success Leader Toolkit
-      </span>
       <h1 class="hero-title">
         Build a <span class="serif-i grad-text">high-performing</span> CS team.<br/>
-        <span class="muted">In 90 days.</span>
+        <span style="color:var(--hero-muted)">In 90 days.</span>
       </h1>
       <p class="lead">
         For CS leaders with real experience and good instincts — but too busy firefighting to catch up.
@@ -331,19 +329,19 @@
 <section class="stats sec-white" style="padding:0 16px">
   <div class="stats-grid">
     <div class="stat"><div class="stat-num"><b class="grad-text">20+</b></div><div class="stat-label">Years in enterprise CS</div></div>
-    <div class="stat"><div class="stat-num"><b class="grad-text">90</b><em>days</em></div><div class="stat-label">Actionable plan</div></div>
+    <div class="stat"><div class="stat-num"><b class="grad-text">90</b><em>days</em></div><div class="stat-label">To a proactive CS org</div></div>
     <div class="stat"><div class="stat-num"><b class="grad-text">14+</b></div><div class="stat-label">Frameworks & templates</div></div>
-    <div class="stat"><div class="stat-num"><b class="grad-text">$500K+</b></div><div class="stat-label">True cost of one churned account</div></div>
+    <div class="stat"><div class="stat-num"><b class="grad-text">$500K+</b></div><div class="stat-label">True cost of one churned enterprise account</div></div>
   </div>
 </section>
 
 
 <!-- PROBLEM -->
-<section class="section problem-bg sec-b">
+<section class="section problem-bg sec-b" id="problem">
   <div class="container">
     <div style="max-width:640px">
       <div class="eyebrow">The Problem</div>
-      <h2 class="section-title">Good enough to survive. <span class="serif-i muted">Not good enough to scale.</span></h2>
+      <h2 class="section-title">Good enough to survive. <span class="serif-i grad-text">Not good enough to scale.</span></h2>
     </div>
     <div class="cards-3" style="grid-template-columns:repeat(2,1fr)">
       <article class="card">
@@ -376,7 +374,7 @@
     <div class="section-head">
       <div style="max-width:640px">
         <div class="eyebrow">What's Inside</div>
-        <h2 class="section-title">A complete toolkit. <span class="serif-i muted">Not another course.</span></h2>
+        <h2 class="section-title">A complete toolkit. <span class="serif-i grad-text">Not another course.</span></h2>
       </div>
       <p class="muted" style="max-width:360px;font-size:14px">Everything you need to rebuild your CS org — frameworks, templates, dashboards, and the week-by-week plan to deploy them.</p>
     </div>
@@ -419,11 +417,11 @@
 </section>
 
 <!-- WHO IS THIS FOR -->
-<section class="section sec-gray">
+<section class="section sec-gray" id="who">
   <div class="container">
     <div style="max-width:640px">
       <div class="eyebrow">Who Is This For</div>
-      <h2 class="section-title">Built for CS leaders <span class="serif-i muted">at every stage.</span></h2>
+      <h2 class="section-title">Built for CS leaders <span class="serif-i grad-text">at every stage.</span></h2>
     </div>
     <div class="who-grid">
       <div class="who-card">
@@ -450,7 +448,7 @@
   <div class="container">
     <div style="max-width:640px;margin-bottom:48px">
       <div class="eyebrow">What Makes This Different</div>
-      <h2 class="section-title">Built by an operator. <span class="serif-i muted">Not a coach.</span></h2>
+      <h2 class="section-title">Built by an operator. <span class="serif-i grad-text">Not a coach.</span></h2>
       <p style="margin-top:20px;font-size:16px;line-height:1.7;color:var(--muted)">Two decades of enterprise CS leadership — scaling teams from a handful of CSMs to 100+, surviving M&amp;A, and turning churn problems into expansion engines. Every framework in this toolkit has been deployed in the field, refined under pressure, and shipped with teams who didn't have a quarter to spare.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:24px">
@@ -588,7 +586,6 @@
 <!-- FINAL CTA -->
 <section id="cta" class="cta-section sec-white">
   <div class="cta-card">
-    <span class="pill"><i class="pulse-dot"></i> Limited early access · $97</span>
     <h2>Stop firefighting. <span class="serif-i grad-text">Start scaling.</span></h2>
     <p>Join the early access list. Be first to know when the toolkit drops — and lock in $97 before the price moves to $197 at launch.</p>
     <form class="cta-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Added ✓';this.querySelector('input').value='';">
@@ -610,16 +607,18 @@
             <path d="M28 13c-1.5-2.2-4.4-3.4-7.6-3.4-4.6 0-7.9 2.3-7.9 5.7 0 3 2.4 4.7 6.8 5.6l2.6.5c3 .6 4.3 1.4 4.3 2.9 0 1.9-2.1 3.1-5.2 3.1-3 0-5.3-1.1-6.6-3" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
           </svg>
         </span>
-        <span class="logo-text">surge<span class="cs">cs</span></span>
+        <span class="logo-text">Surge <span class="cs">CS</span></span>
       </a>
-      <p class="muted" style="margin-top:12px;font-size:14px;max-width:360px">The 90-day operating system for customer success leaders.</p>
     </div>
-    <div class="foot-links">
-      <a href="#how-it-works">How it works</a>
-      <a href="#whats-inside">What's inside</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#about">About</a>
-      <a href="#cta">Early access</a>
+    <div class="foot-links" style="display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12px">
+      <a href="#problem">The Problem</a>
+      <a href="#whats-inside">What's Inside</a>
+      <a href="#who">Who Is This For</a>
+      <a href="#about">What Makes This Different</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#pricing">Get The Toolkit</a>
+      <a href="#cta">Early Access</a>
+      <a href="/privacy">Privacy Policy</a>
     </div>
   </div>
   <div class="copyright" style="max-width:1152px;margin:0 auto;padding-top:32px;border-top:1px solid var(--border);margin-top:32px">© <script>document.write(new Date().getFullYear())</script> SurgeCS. All rights reserved.</div>
