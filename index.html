@@ -15,30 +15,30 @@
 <style>
   :root{
     --bg:#ffffff; --surface:#ffffff; --ink:#0f1e35; --muted:#4a6070;
-    --border:#e8dff0; --pale-purple:#f0eafa; --pale-pink:#fce8f6; --pale-mid:#f5e8f5;
+    --border:#D8E8F4; --pale-purple:#EEF4FB; --pale-pink:#EAF2FC; --pale-mid:#EEF4FB;
     /* Swatch palette — exact values */
-    --purple:#462C7D;       /* deep purple — structural/dark */
-    --purple-dark:#341f5c;  /* purple hover */
+    --purple:#1B3F7A;       /* deep purple — structural/dark */
+    --purple-dark:#122C5C;  /* purple hover */
     --pink:#D552A3;         /* magenta — accent/highlight */
     --pink-dark:#b8408a;    /* magenta hover */
     /* --green removed */
     /* Aliases */
     --grad:var(--pink);
-    --grad-soft:rgba(70,44,125,.08);
+    --grad-soft:rgba(27,63,122,.08);
     --mesh:
-      radial-gradient(at 20% 20%,rgba(213,82,163,.12) 0,transparent 50%),
-      radial-gradient(at 80% 10%,rgba(70,44,125,.14) 0,transparent 50%),
-      radial-gradient(at 70% 80%,rgba(213,82,163,.10) 0,transparent 50%),
-      radial-gradient(at 10% 80%,rgba(70,44,125,.08) 0,transparent 50%);
+      radial-gradient(at 20% 20%,rgba(74,123,196,.12) 0,transparent 50%),
+      radial-gradient(at 80% 10%,rgba(27,63,122,.14) 0,transparent 50%),
+      radial-gradient(at 70% 80%,rgba(74,123,196,.10) 0,transparent 50%),
+      radial-gradient(at 10% 80%,rgba(27,63,122,.08) 0,transparent 50%);
     --shadow-soft:0 1px 2px rgba(11,30,53,.04),0 8px 24px -12px rgba(11,30,53,.10);
-    --shadow-card:0 1px 0 rgba(220,210,240,.6),0 12px 40px -16px rgba(11,30,53,.10);
-    --shadow-glow:0 20px 60px -20px rgba(70,44,125,.30);
+    --shadow-card:0 1px 0 rgba(210,228,244,.6),0 12px 40px -16px rgba(11,30,53,.10);
+    --shadow-glow:0 20px 60px -20px rgba(27,63,122,.30);
     --radius:14px;
     --sec-a:#ffffff;
-    --sec-b:#f8f5fc;
-    --sec-c:#f3eef9;
-    --sec-dark:#462C7D;
-    --hero-muted:#9b8ab8; /* light purple-gray for hero subtitle */
+    --sec-b:#F4F8FD;
+    --sec-c:#EDF3FA;
+    --sec-dark:#1B3F7A;
+    --hero-muted:#3560A0; /* between mid and dark blue for hero subtitle */
   }
   *{box-sizing:border-box;margin:0;padding:0;border-color:var(--border)}
   html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth}
@@ -55,7 +55,7 @@
   .btn-primary{background:var(--purple);color:#fff;box-shadow:var(--shadow-glow)}
   .btn-primary:hover{transform:translateY(-1px);background:var(--pink-dark)}
   .btn-ghost{background:var(--surface);color:var(--ink);border-color:var(--border)}
-  .btn-ghost:hover{background:#f4f4f7}
+  .btn-ghost:hover{background:#F2F6FB}
   .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:4px;border:1px solid var(--border);background:rgba(255,255,255,.7);font-size:12px;font-weight:500;color:var(--muted);backdrop-filter:blur(10px)}
 
   /* Nav */
@@ -87,7 +87,7 @@
 
   /* Roadmap card */
   .roadmap-wrap{position:relative}
-  .roadmap-glow{position:absolute;inset:-24px;border-radius:0;background:rgba(70,44,125,.05);filter:blur(40px);z-index:-1}
+  .roadmap-glow{position:absolute;inset:-24px;border-radius:0;background:rgba(27,63,122,.05);filter:blur(40px);z-index:-1}
   .roadmap{position:relative;padding:24px;border:1px solid var(--border);border-radius:0;background:var(--surface);box-shadow:var(--shadow-card);animation:floaty 8s ease-in-out infinite}
   @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
   .roadmap-header{display:flex;justify-content:space-between;align-items:center}
@@ -98,7 +98,7 @@
   .row-head{display:flex;justify-content:space-between;align-items:baseline;font-size:14px}
   .row-head b{font-weight:500;color:var(--ink)}
   .row-head em{font-style:normal;font-size:12px;color:var(--muted)}
-  .bar{margin-top:8px;height:6px;border-radius:0;background:#f1f1f5;overflow:hidden}
+  .bar{margin-top:8px;height:6px;border-radius:0;background:#F1F5FA;overflow:hidden}
   .bar > i{display:block;height:100%;background:var(--pink);border-radius:0}
   .stats-mini{margin-top:24px;padding-top:20px;border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
   .stat-mini b{font-size:16px;font-weight:600}
@@ -150,7 +150,7 @@
   .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
   @media(max-width:900px){.about-grid{grid-template-columns:1fr}}
   .about-img-wrap{position:relative}
-  .about-img-glow{position:absolute;inset:-16px;border-radius:0;background:rgba(70,44,125,.05);filter:blur(40px);z-index:-1}
+  .about-img-glow{position:absolute;inset:-16px;border-radius:0;background:rgba(27,63,122,.05);filter:blur(40px);z-index:-1}
   .about-img{aspect-ratio:4/5;border-radius:0;border:1px solid var(--border);background:linear-gradient(135deg,var(--pale-purple),var(--surface) 50%,var(--pale-mid));box-shadow:var(--shadow-card);display:flex;align-items:flex-end;padding:32px}
   .about-img b{font-family:'Instrument Serif',serif;font-style:italic;font-size:64px;line-height:1}
   .about-img span{display:block;margin-top:8px;font-size:14px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
@@ -208,7 +208,7 @@
 
   /* Pricing */
   .pricing-wrap{max-width:680px;margin:48px auto 0}
-  .pricing-card{background:var(--purple);border:1px solid rgba(70,44,125,.25);border-radius:0;overflow:hidden;position:relative}
+  .pricing-card{background:var(--purple);border:1px solid rgba(27,63,122,.25);border-radius:0;overflow:hidden;position:relative}
   .pricing-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#e896d4}
   .pricing-top{padding:32px 36px 24px;border-bottom:1px solid rgba(255,255,255,.08)}
   .pricing-eyebrow{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px}
@@ -248,7 +248,7 @@
   .consult-cta-box p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.65;margin-bottom:24px}
   .consult-price{font-size:13px;color:rgba(255,255,255,.45);margin-top:12px}
 </style>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23462C7D'/%3E%3Ctext x='16' y='22' font-family='Inter,ui-sans-serif,sans-serif' font-size='20' font-weight='600' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B3F7A'/%3E%3Ctext x='16' y='22' font-family='Inter,ui-sans-serif,sans-serif' font-size='20' font-weight='600' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
 
@@ -383,32 +383,32 @@
   <div style="margin-top:48px;width:100%;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
     <div style="display:grid;grid-template-columns:repeat(3,1fr)">
       <div style="padding:36px 48px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)">
-        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#f0eafa;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="#462C7D" stroke="#462C7D" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="#1B3F7A" stroke="#1B3F7A" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">The 90-Day Operating System</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">A week-by-week plan that turns reactive teams into proactive ones. Diagnose, stabilize, systemize, scale.</p>
       </div>
       <div style="padding:36px 48px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)">
-        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#f0eafa;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#462C7D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#c4b8e8"/><polyline points="14 2 14 8 20 8" fill="#462C7D"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span>
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#A8C4E0"/><polyline points="14 2 14 8 20 8" fill="#1B3F7A"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">14+ frameworks & templates</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">QBR decks, health scoring, escalation playbooks, renewal motions — production-ready, not theoretical.</p>
       </div>
       <div style="padding:36px 48px;border-bottom:1px solid var(--border)">
-        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#f0eafa;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#462C7D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="12" width="4" height="8" fill="#c4b8e8" stroke="#462C7D"/><rect x="9" y="6" width="4" height="14" fill="#9b87d1" stroke="#462C7D"/><rect x="16" y="2" width="4" height="18" fill="#462C7D" stroke="#462C7D"/><line x1="2" y1="20" x2="20" y2="20"/></svg></span>
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="12" width="4" height="8" fill="#A8C4E0" stroke="#1B3F7A"/><rect x="9" y="6" width="4" height="14" fill="#4A7BC4" stroke="#1B3F7A"/><rect x="16" y="2" width="4" height="18" fill="#1B3F7A" stroke="#1B3F7A"/><line x1="2" y1="20" x2="20" y2="20"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">CS metrics that matter</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Stop measuring activity. Start measuring outcomes that compound.</p>
       </div>
       <div style="padding:36px 48px;border-right:1px solid var(--border)">
-        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#f0eafa;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#462C7D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4" fill="#c4b8e8"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" fill="#c4b8e8"/><circle cx="17" cy="7" r="3" fill="#9b87d1"/><path d="M21 21v-1.5a3 3 0 0 0-3-3h-1" fill="none"/></svg></span>
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4" fill="#A8C4E0"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" fill="#A8C4E0"/><circle cx="17" cy="7" r="3" fill="#4A7BC4"/><path d="M21 21v-1.5a3 3 0 0 0-3-3h-1" fill="none"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">Team design</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Pods, segments, ratios, and career ladders that scale past 20 CSMs.</p>
       </div>
       <div style="padding:36px 48px;border-right:1px solid var(--border)">
-        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#f0eafa;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#462C7D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" fill="#c4b8e8"/><circle cx="12" cy="12" r="6" fill="#9b87d1"/><circle cx="12" cy="12" r="2" fill="#462C7D"/><line x1="22" y1="2" x2="17" y2="7"/><line x1="17" y1="2" x2="22" y2="7"/></svg></span>
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" fill="#A8C4E0"/><circle cx="12" cy="12" r="6" fill="#4A7BC4"/><circle cx="12" cy="12" r="2" fill="#1B3F7A"/><line x1="22" y1="2" x2="17" y2="7"/><line x1="17" y1="2" x2="22" y2="7"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">Expansion motion</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Turn CS into a revenue engine without becoming sales.</p>
       </div>
       <div style="padding:36px 48px">
-        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#f0eafa;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#462C7D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3" fill="#462C7D"/><circle cx="4" cy="19" r="3" fill="#c4b8e8"/><circle cx="20" cy="19" r="3" fill="#c4b8e8"/><line x1="12" y1="8" x2="4" y2="16"/><line x1="12" y1="8" x2="20" y2="16"/><line x1="7" y1="19" x2="17" y2="19"/></svg></span>
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3" fill="#1B3F7A"/><circle cx="4" cy="19" r="3" fill="#A8C4E0"/><circle cx="20" cy="19" r="3" fill="#A8C4E0"/><line x1="12" y1="8" x2="4" y2="16"/><line x1="12" y1="8" x2="20" y2="16"/><line x1="7" y1="19" x2="17" y2="19"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">Cross-functional alignment</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Operating cadences with Sales, Product, and Support that actually stick.</p>
       </div>
