@@ -136,9 +136,10 @@
   /* Timeline */
   .phases{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
   @media(max-width:900px){.phases{grid-template-columns:1fr}}
-  .phases::before{content:"";position:absolute;left:0;right:0;top:24px;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);display:none}
+  .phases::before{content:"";position:absolute;left:0;right:0;top:28px;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);display:none;z-index:0}
   @media(min-width:900px){.phases::before{display:block}}
-  .phase-num{display:inline-flex;width:48px;height:48px;border-radius:50%;border:1px solid var(--border);background:var(--surface);align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:18px;box-shadow:var(--shadow-soft)}
+  .phase-num{position:relative;z-index:1;display:inline-flex;width:56px;height:56px;border-radius:50%;border:2px solid var(--border);background:var(--surface);align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:26px;box-shadow:var(--shadow-soft);transition:all .2s ease;cursor:default;color:var(--purple)}
+  .phase-num:hover{background:var(--purple);color:#fff;border-color:var(--purple);transform:scale(1.15);box-shadow:var(--shadow-card)}
   .phase-row{display:flex;align-items:center;gap:12px}
   .phase-row span{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
   .phase h3{margin-top:20px;font-size:20px;font-weight:600}
@@ -382,27 +383,27 @@
   <!-- Full-width table grid -->
   <div style="margin-top:48px;width:100%;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
     <div style="display:grid;grid-template-columns:repeat(3,1fr)">
-      <div style="padding:36px 48px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)">
+      <div style="padding:36px 48px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:all .2s ease;cursor:default" onmouseover="this.style.background='#f0f4fa';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='';this.style.transform=''">
         <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="#1B3F7A" stroke="#1B3F7A" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">The 90-Day Operating System</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">A week-by-week plan that turns reactive teams into proactive ones. Diagnose, stabilize, systemize, scale.</p>
       </div>
-      <div style="padding:36px 48px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)">
+      <div style="padding:36px 48px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:all .2s ease;cursor:default" onmouseover="this.style.background='#f0f4fa';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='';this.style.transform=''">
         <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#A8C4E0"/><polyline points="14 2 14 8 20 8" fill="#1B3F7A"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">14+ frameworks & templates</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">QBR decks, health scoring, escalation playbooks, renewal motions — production-ready, not theoretical.</p>
       </div>
-      <div style="padding:36px 48px;border-bottom:1px solid var(--border)">
+      <div style="padding:36px 48px;border-bottom:1px solid var(--border);transition:background .2s,transform .2s;cursor:default" onmouseover="this.style.background='#eef3fa';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='';this.style.transform=''">
         <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="12" width="4" height="8" fill="#A8C4E0" stroke="#1B3F7A"/><rect x="9" y="6" width="4" height="14" fill="#4A7BC4" stroke="#1B3F7A"/><rect x="16" y="2" width="4" height="18" fill="#1B3F7A" stroke="#1B3F7A"/><line x1="2" y1="20" x2="20" y2="20"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">CS metrics that matter</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Stop measuring activity. Start measuring outcomes that compound.</p>
       </div>
-      <div style="padding:36px 48px;border-right:1px solid var(--border)">
+      <div style="padding:36px 48px;border-right:1px solid var(--border);transition:background .2s,transform .2s;cursor:default" onmouseover="this.style.background='#eef3fa';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='';this.style.transform=''">
         <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4" fill="#A8C4E0"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" fill="#A8C4E0"/><circle cx="17" cy="7" r="3" fill="#4A7BC4"/><path d="M21 21v-1.5a3 3 0 0 0-3-3h-1" fill="none"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">Team design</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Pods, segments, ratios, and career ladders that scale past 20 CSMs.</p>
       </div>
-      <div style="padding:36px 48px;border-right:1px solid var(--border)">
+      <div style="padding:36px 48px;border-right:1px solid var(--border);transition:background .2s,transform .2s;cursor:default" onmouseover="this.style.background='#eef3fa';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='';this.style.transform=''">
         <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" fill="#A8C4E0"/><circle cx="12" cy="12" r="6" fill="#4A7BC4"/><circle cx="12" cy="12" r="2" fill="#1B3F7A"/><line x1="22" y1="2" x2="17" y2="7"/><line x1="17" y1="2" x2="22" y2="7"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">Expansion motion</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Turn CS into a revenue engine without becoming sales.</p>
@@ -550,7 +551,7 @@
     <div style="display:grid;grid-template-columns:1fr 280px;width:100%">
 
       <!-- LEFT: Eyebrow + Title + includes grid -->
-      <div style="padding:56px 64px;border-right:1px solid var(--border)">
+      <div style="padding:36px 64px;border-right:1px solid var(--border)">
         <div class="eyebrow" style="margin-bottom:16px">Pricing</div>
         <h2 class="section-title" style="margin-bottom:32px">The Toolkit + <span class="serif-i grad-text">Personal Guidance.</span></h2>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 48px">
@@ -574,12 +575,12 @@
       </div>
 
       <!-- FAR RIGHT: Giant price — top aligned to match left -->
-      <div style="padding:56px 48px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px">
+      <div style="padding:36px 48px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px">
         <div class="eyebrow" style="margin-bottom:8px">Early Access</div>
         <div style="font-size:80px;font-weight:700;color:var(--purple);letter-spacing:-.04em;line-height:1">$97</div>
         <div style="font-size:13px;color:var(--muted);margin-top:4px">Early access price</div>
         <div style="font-size:13px;color:var(--muted)"><s>$197 at launch</s></div>
-        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.6">14 frameworks + templates<br>2 live 60-minute sessions<br>with Susan</div>
+        
       </div>
 
     </div>
@@ -589,7 +590,7 @@
   <div style="background:var(--purple);width:100%">
     <!-- Centered header -->
     <div style="text-align:center;padding:40px 64px 0">
-      <div style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px">Why $97 is a no-brainer</div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:8px">Why $97 is a no-brainer</div>
     </div>
 
     <!-- Three value props -->
