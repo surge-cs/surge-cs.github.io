@@ -138,7 +138,7 @@
   @media(max-width:900px){.phases{grid-template-columns:1fr}}
   .phases::before{content:"";position:absolute;left:0;right:0;top:28px;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);display:none;z-index:0}
   @media(min-width:900px){.phases::before{display:block}}
-  .phase-num{position:relative;z-index:1;display:inline-flex;width:56px;height:56px;border-radius:50%;border:2px solid var(--border);background:var(--surface);align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:26px;box-shadow:var(--shadow-soft);transition:all .2s ease;cursor:default;color:var(--purple)}
+  .phase-num{position:relative;z-index:1;display:inline-flex;width:56px;height:56px;border-radius:50%;border:2px solid var(--border);background:var(--surface);align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:30px;font-weight:700;box-shadow:var(--shadow-soft);transition:all .2s ease;cursor:default;color:var(--purple)}
   .phase-num:hover{background:var(--purple);color:#fff;border-color:var(--purple);transform:scale(1.15);box-shadow:var(--shadow-card)}
   .phase-row{display:flex;align-items:center;gap:12px}
   .phase-row span{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -408,8 +408,7 @@
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">Expansion motion</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Turn CS into a revenue engine without becoming sales.</p>
       </div>
-      <div style="padding:36px 48px">
-        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3" fill="#1B3F7A"/><circle cx="4" cy="19" r="3" fill="#A8C4E0"/><circle cx="20" cy="19" r="3" fill="#A8C4E0"/><line x1="12" y1="8" x2="4" y2="16"/><line x1="12" y1="8" x2="20" y2="16"/><line x1="7" y1="19" x2="17" y2="19"/></svg></span>
+      <div style="padding:36px 48px;transition:background .2s,transform .2s;cursor:default" onmouseover="this.style.background='#eef3fa';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='';this.style.transform=''">;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3" fill="#1B3F7A"/><circle cx="4" cy="19" r="3" fill="#A8C4E0"/><circle cx="20" cy="19" r="3" fill="#A8C4E0"/><line x1="12" y1="8" x2="4" y2="16"/><line x1="12" y1="8" x2="20" y2="16"/><line x1="7" y1="19" x2="17" y2="19"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">Cross-functional alignment</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Operating cadences with Sales, Product, and Support that actually stick.</p>
       </div>
