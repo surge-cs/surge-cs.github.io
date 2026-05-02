@@ -543,44 +543,81 @@
 
 
 <!-- PRICING -->
-<section class="section sec-white" id="pricing">
-  <div class="container">
-    <div style="text-align:center;max-width:560px;margin:0 auto 0">
-      <div class="eyebrow">Get the Toolkit</div>
-      <h2 class="section-title" style="margin:0 auto">The Toolkit + <span class="serif-i grad-text">Personal Guidance.</span></h2>
-      <p class="muted" style="margin-top:16px;font-size:16px">Everything you need to build a proactive CS org — plus two live sessions with Susan to make sure it sticks.</p>
-    </div>
-    <div class="pricing-wrap">
-      <div class="pricing-card">
-        <div class="pricing-top">
-          <div class="pricing-eyebrow">Early Access</div>
-          <div class="pricing-name">The Toolkit + Personal Guidance</div>
-          <div class="pricing-desc">14 frameworks, templates & playbooks — plus two 60-minute sessions with Susan. Built for CS leaders ready to stop reacting and start scaling.</div>
-        </div>
-        <div class="pricing-amount">
-          <div class="price-big">$97</div>
-          <div class="price-meta">Early access price<br><s>$197 at launch</s></div>
-        </div>
-        <div class="pricing-includes">
-          <div class="inc-label">What's included</div>
-          <div class="inc-item"><span class="inc-check">✓</span><span>The full 90-Day CS Toolkit — 14 frameworks & templates</span></div>
-          <div class="inc-item"><span class="inc-check">✓</span><span>Kick-off session (Week 1–2) — prioritize Phase 1 for your specific org</span></div>
-          <div class="inc-item"><span class="inc-check">✓</span><span>Check-in session — use it anytime in your 90 days when you hit a wall</span></div>
-          <div class="inc-item"><span class="inc-check">✓</span><span>Additional 60-minute sessions available at $297 — book anytime</span></div>
-        </div>
-        <div class="pricing-value">
-          <div class="val-label">Why $97 is a no-brainer</div>
-          <div class="val-item"><span style="color:#e896d4;flex-shrink:0">→</span><span>A CS consultant charges <strong>$150–250/hr</strong>. Two 60-minute sessions with Susan alone are worth 2–3× the price.</span></div>
-          <div class="val-item"><span style="color:#e896d4;flex-shrink:0">→</span><span>Losing one enterprise account can cost <strong>$500K+</strong> (ARR + CAC + lost expansion). This helps you catch it before it leaves.</span></div>
-          <div class="val-item"><span style="color:#e896d4;flex-shrink:0">→</span><span>Every other CS resource is built for CSMs. <strong>This is built for the person leading them.</strong></span></div>
-        </div>
-        <div class="pricing-actions">
-          <a href="#cta" class="btn-buy" style="flex-direction:column;gap:4px;padding:20px">Get early access for $97<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg></a>
-          <div class="pricing-note">Early access pricing · Moves to $197 at launch · No spam, ever</div>
+<section class="section sec-white" id="pricing" style="padding-left:0;padding-right:0;padding-top:0;padding-bottom:0">
+
+  <!-- Top area: title + includes left, large price right -->
+  <div style="width:100%;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+    <div style="display:grid;grid-template-columns:1fr 280px;width:100%">
+
+      <!-- LEFT: Eyebrow + Title + includes grid -->
+      <div style="padding:56px 64px;border-right:1px solid var(--border)">
+        <div class="eyebrow" style="margin-bottom:16px">Pricing</div>
+        <h2 class="section-title" style="margin-bottom:32px">The Toolkit + <span class="serif-i grad-text">Personal Guidance.</span></h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 48px">
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
+            <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
+            <span>The full 90-Day CS Toolkit — 14 frameworks & templates</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
+            <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
+            <span>Check-in session — use it anytime in your 90 days when you hit a wall</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
+            <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
+            <span>Kick-off session (Week 1–2) — prioritize Phase 1 for your specific org</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
+            <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
+            <span>Additional 60-minute sessions available at $297 — book anytime</span>
+          </div>
         </div>
       </div>
+
+      <!-- FAR RIGHT: Giant price — top aligned to match left -->
+      <div style="padding:56px 48px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px">
+        <div class="eyebrow" style="margin-bottom:8px">Early Access</div>
+        <div style="font-size:80px;font-weight:700;color:var(--purple);letter-spacing:-.04em;line-height:1">$97</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">Early access price</div>
+        <div style="font-size:13px;color:var(--muted)"><s>$197 at launch</s></div>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.6">14 frameworks + templates<br>2 live 60-minute sessions<br>with Susan</div>
+      </div>
+
     </div>
   </div>
+
+  <!-- Bottom navy strip: centered header, value props, centered buy button -->
+  <div style="background:var(--purple);width:100%">
+    <!-- Centered header -->
+    <div style="text-align:center;padding:40px 64px 0">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px">Why $97 is a no-brainer</div>
+    </div>
+
+    <!-- Three value props -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:24px 64px 0">
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="color:var(--pink);font-weight:700;flex-shrink:0;margin-top:2px">→</span>
+        <span style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.55">A CS consultant charges <strong style="color:#fff">$150–250/hr</strong>. Two sessions with Susan alone are worth 2–3× the price.</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="color:var(--pink);font-weight:700;flex-shrink:0;margin-top:2px">→</span>
+        <span style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.55">Losing one enterprise account can cost <strong style="color:#fff">$500K+</strong>. This helps you catch it before it leaves.</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="color:var(--pink);font-weight:700;flex-shrink:0;margin-top:2px">→</span>
+        <span style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.55">Every other CS resource is built for CSMs. <strong style="color:#fff">This is built for the person leading them.</strong></span>
+      </div>
+    </div>
+
+    <!-- Centered CTA button -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:32px 64px 40px">
+      <a href="#cta" style="display:flex;flex-direction:column;align-items:center;gap:5px;padding:18px 48px;background:#fff;color:var(--purple);font-size:15px;font-weight:700;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,.92)'" onmouseout="this.style.background='#fff'">
+        Get early access for $97
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+      </a>
+      <div style="font-size:11px;color:rgba(255,255,255,.4);text-align:center">Moves to $197 at launch</div>
+    </div>
+  </div>
+
 </section>
 
 <!-- FINAL CTA -->
