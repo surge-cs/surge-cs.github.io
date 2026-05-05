@@ -138,8 +138,8 @@
   @media(max-width:900px){.phases{grid-template-columns:1fr}}
   .phases::before{content:"";position:absolute;left:0;right:0;top:28px;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);display:none;z-index:0}
   @media(min-width:900px){.phases::before{display:block}}
-  .phase-num{position:relative;z-index:1;display:inline-flex;width:56px;height:56px;border-radius:50%;border:2px solid var(--border);background:var(--surface);align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:30px;font-weight:700;box-shadow:var(--shadow-soft);transition:all .2s ease;cursor:default;color:var(--purple)}
-  .phase-num:hover{background:var(--purple);color:#fff;border-color:var(--purple);transform:scale(1.15);box-shadow:var(--shadow-card)}
+  .phase-num{position:relative;z-index:1;display:inline-flex;width:60px;height:60px;border-radius:50%;border:2px solid var(--border);background:var(--surface);align-items:center;justify-content:center;font-family:'Inter',ui-sans-serif,sans-serif;font-style:normal;font-size:22px;font-weight:800;box-shadow:var(--shadow-soft);transition:all .2s ease;cursor:default;color:#3560A0;letter-spacing:-.02em}
+  .phase-num:hover{background:var(--purple);color:#fff;border-color:var(--purple);transform:scale(1.1);box-shadow:var(--shadow-card)}
   .phase-row{display:flex;align-items:center;gap:12px}
   .phase-row span{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
   .phase h3{margin-top:20px;font-size:20px;font-weight:600}
@@ -408,7 +408,8 @@
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">Expansion motion</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Turn CS into a revenue engine without becoming sales.</p>
       </div>
-      <div style="padding:36px 48px;transition:background .2s,transform .2s;cursor:default" onmouseover="this.style.background='#eef3fa';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='';this.style.transform=''">;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3" fill="#1B3F7A"/><circle cx="4" cy="19" r="3" fill="#A8C4E0"/><circle cx="20" cy="19" r="3" fill="#A8C4E0"/><line x1="12" y1="8" x2="4" y2="16"/><line x1="12" y1="8" x2="20" y2="16"/><line x1="7" y1="19" x2="17" y2="19"/></svg></span>
+      <div style="padding:36px 48px;transition:background .2s,transform .2s;cursor:default" onmouseover="this.style.background='#eef3fa';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='';this.style.transform=''">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#EEF4FB;border-radius:4px;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B3F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3" fill="#1B3F7A"/><circle cx="4" cy="19" r="3" fill="#A8C4E0"/><circle cx="20" cy="19" r="3" fill="#A8C4E0"/><line x1="12" y1="8" x2="4" y2="16"/><line x1="12" y1="8" x2="20" y2="16"/><line x1="7" y1="19" x2="17" y2="19"/></svg></span>
         <h3 style="margin-top:20px;font-size:18px;font-weight:600">Cross-functional alignment</h3>
         <p style="margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)">Operating cadences with Sales, Product, and Support that actually stick.</p>
       </div>
@@ -503,7 +504,7 @@
     <div class="phases">
       <div class="phase">
         <div class="phase-row">
-          <span class="phase-num" style="color:var(--pink)">01</span>
+          <span class="phase-num">01</span>
           <span>Days 1–30</span>
         </div>
         <h3>Diagnose & Stabilize</h3>
@@ -515,7 +516,7 @@
       </div>
       <div class="phase">
         <div class="phase-row">
-          <span class="phase-num" style="color:var(--pink)">02</span>
+          <span class="phase-num">02</span>
           <span>Days 31–60</span>
         </div>
         <h3>Systems & Playbooks</h3>
@@ -527,7 +528,7 @@
       </div>
       <div class="phase">
         <div class="phase-row">
-          <span class="phase-num" style="color:var(--pink)">03</span>
+          <span class="phase-num">03</span>
           <span>Days 61–90</span>
         </div>
         <h3>Scale & Expansion</h3>
@@ -543,52 +544,47 @@
 
 
 <!-- PRICING -->
-<section class="section sec-white" id="pricing" style="padding-left:0;padding-right:0;padding-top:0;padding-bottom:0">
+<section class="section sec-white" id="pricing" style="padding-left:0;padding-right:0;padding-bottom:0">
 
-  <!-- Top area: title + includes left, large price right -->
-  <div style="width:100%;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-    <div style="display:grid;grid-template-columns:1fr 280px;width:100%">
-
-      <!-- LEFT: Eyebrow + Title + includes grid -->
-      <div style="padding:36px 64px;border-right:1px solid var(--border)">
-        <div class="eyebrow" style="margin-bottom:16px">Pricing</div>
-        <h2 class="section-title" style="margin-bottom:32px">The Toolkit + <span class="serif-i grad-text">Personal Guidance.</span></h2>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 48px">
-          <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
-            <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
-            <span>The full 90-Day CS Toolkit — 14 frameworks & templates</span>
-          </div>
-          <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
-            <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
-            <span>Check-in session — use it anytime in your 90 days when you hit a wall</span>
-          </div>
-          <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
-            <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
-            <span>Kick-off session (Week 1–2) — prioritize Phase 1 for your specific org</span>
-          </div>
-          <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
-            <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
-            <span>Additional 60-minute sessions available at $297 — book anytime</span>
-          </div>
-        </div>
+  <!-- Section header + single-column checklist -->
+  <div class="container" style="padding-bottom:48px">
+    <div class="eyebrow">Pricing</div>
+    <h2 class="section-title" style="margin-top:12px;margin-bottom:32px">The Toolkit + <span class="serif-i grad-text">Personal Guidance.</span></h2>
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:560px">
+      <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
+        <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
+        <span>The full 90-Day CS Toolkit — 14 frameworks & templates</span>
       </div>
-
-      <!-- FAR RIGHT: Giant price — top aligned to match left -->
-      <div style="padding:36px 48px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px">
-        <div class="eyebrow" style="margin-bottom:8px">Early Access</div>
-        <div style="font-size:80px;font-weight:700;color:var(--purple);letter-spacing:-.04em;line-height:1">$97</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">Early access price</div>
-        <div style="font-size:13px;color:var(--muted)"><s>$197 at launch</s></div>
-        
+      <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
+        <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
+        <span>Kick-off session (Week 1–2) — prioritize Phase 1 for your specific org</span>
       </div>
-
+      <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
+        <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
+        <span>Check-in session — use it anytime in your 90 days when you hit a wall</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink)">
+        <span style="color:var(--pink);font-weight:700;flex-shrink:0">✓</span>
+        <span>Additional 60-minute sessions available at $297 — book anytime</span>
+      </div>
     </div>
   </div>
 
-  <!-- Bottom navy strip: centered header, value props, centered buy button -->
+  <!-- Bottom navy strip: price block + value props + CTA -->
   <div style="background:var(--purple);width:100%">
-    <!-- Centered header -->
+
+    <!-- Price block -->
     <div style="text-align:center;padding:40px 64px 0">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:12px">Early Access</div>
+      <div style="font-size:80px;font-weight:700;color:#fff;letter-spacing:-.04em;line-height:1">$97</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:8px">Early access price &nbsp;·&nbsp; <s style="color:rgba(255,255,255,.3)">$197 at launch</s></div>
+    </div>
+
+    <!-- Divider -->
+    <div style="border-top:1px solid rgba(255,255,255,.1);margin:28px 64px 0"></div>
+
+    <!-- Why $97 header -->
+    <div style="text-align:center;padding:24px 64px 0">
       <div style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:8px">Why $97 is a no-brainer</div>
     </div>
 
