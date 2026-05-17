@@ -69,15 +69,16 @@
   .logo-mark{width:36px;height:36px;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;background:var(--purple)}
   .logo-text{font-size:17px;font-weight:500;letter-spacing:-.01em}
   .logo-text .cs{color:var(--muted);margin-left:4px}
+  @media(max-width:1024px){.nav{padding:14px 24px}.nav-links{gap:20px}.nav-links a{font-size:13px}}
   @media(max-width:768px){.nav-links,.nav .btn-primary{display:none}}
 
   /* Hero */
-  .hero{position:relative;padding:108px 0 96px;overflow:hidden;background:#ffffff}
+  .hero{position:relative;padding:64px 0 64px;overflow:hidden;background:#ffffff}
   .hero::before{content:"";position:absolute;inset:0;background:var(--mesh);opacity:.8;z-index:-2}
   .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(91,99,122,.12) 1px,transparent 1px);background-size:22px 22px;opacity:.4;z-index:-1}
   .hero-grid{display:grid;gap:48px;grid-template-columns:1.1fr .9fr;align-items:center}
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
-  h1.hero-title{margin-top:0;font-size:clamp(28px,3.8vw,48px);font-weight:600;line-height:1.1;letter-spacing:-.02em}
+  h1.hero-title{margin-top:0;font-size:clamp(32px,4.5vw,52px);font-weight:600;line-height:1.05;letter-spacing:-.02em}
   .hero p.lead{margin-top:24px;font-size:18px;line-height:1.6;color:var(--muted);max-width:560px}
   .hero p.lead strong{color:var(--ink);font-weight:600}
   .cta-row{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
@@ -116,7 +117,7 @@
 
 
   /* Sections */
-  .section{padding:96px 0}
+  .section{padding:72px 0}
   .eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink)}
   h2.section-title{margin-top:16px;font-size:clamp(32px,4.5vw,52px);font-weight:600;line-height:1.05;letter-spacing:-.02em;max-width:900px}
 
@@ -280,7 +281,7 @@
     <div>
       <h1 class="hero-title">
         Build A <span class="serif-i grad-text">High-Performing</span><br/>
-        Customer Success Team.<br/>
+        Customer&nbsp;Success Team.<br/>
         <span style="color:var(--hero-muted)">In 90 Days.</span>
       </h1>
       <p class="lead">
@@ -343,7 +344,7 @@
   <div class="container">
     <div style="max-width:640px">
       <div class="eyebrow">The Problem</div>
-      <h2 class="section-title">Good enough to survive. <span class="serif-i grad-text">Not good enough to scale.</span></h2>
+      <h2 class="section-title">Good Enough To Survive. <span class="serif-i grad-text">Not Good Enough To Scale.</span></h2>
     </div>
     <div class="cards-3" style="grid-template-columns:repeat(2,1fr)">
       <article class="card">
@@ -374,7 +375,7 @@
 <section id="whats-inside" class="section sec-white" style="padding-left:0;padding-right:0">
   <div style="max-width:1152px;margin:0 auto;padding:0 48px">
     <div class="eyebrow">What's Inside</div>
-    <h2 class="section-title" style="margin-top:16px">A complete toolkit. <span class="serif-i grad-text">Not another course.</span></h2>
+    <h2 class="section-title" style="margin-top:16px">A Complete Toolkit. <span class="serif-i grad-text">Not Another Course.</span></h2>
     <p class="muted" style="margin-top:16px;font-size:15px;max-width:560px">Everything you need to rebuild your CS org — frameworks, templates, dashboards, and the week-by-week plan to deploy them.</p>
   </div>
   <!-- Full-width table grid -->
@@ -419,7 +420,7 @@
   <div class="container">
     <div style="max-width:640px">
       <div class="eyebrow">Who Is This For</div>
-      <h2 class="section-title">Built for CS leaders <span class="serif-i grad-text">at every stage.</span></h2>
+      <h2 class="section-title">Built For CS Leaders <span class="serif-i grad-text">At Every Stage.</span></h2>
     </div>
     <div class="who-grid">
       <div class="who-card">
@@ -446,7 +447,7 @@
   <div class="container">
     <div style="max-width:640px;margin-bottom:48px">
       <div class="eyebrow">What Makes This Different</div>
-      <h2 class="section-title">Built by an operator. <span class="serif-i grad-text">Not a coach.</span></h2>
+      <h2 class="section-title">Built By An Operator. <span class="serif-i grad-text">Not A Coach.</span></h2>
       <p style="margin-top:20px;font-size:16px;line-height:1.7;color:var(--muted)">Two decades of enterprise CS leadership — scaling teams from a handful of CSMs to 100+, surviving M&amp;A, and turning churn problems into expansion engines. Every framework in this toolkit has been deployed in the field, refined under pressure, and shipped with teams who didn't have a quarter to spare.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:24px">
@@ -496,7 +497,7 @@
   <div class="container">
     <div style="max-width:640px">
       <div class="eyebrow">How It Works</div>
-      <h2 class="section-title">One system. <span class="serif-i grad-text">Three phases.</span></h2>
+      <h2 class="section-title">One System. <span class="serif-i grad-text">Three Phases.</span></h2>
     </div>
     <div class="phases">
       <div class="phase">
